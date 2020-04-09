@@ -17,7 +17,7 @@ server.use(morgan('short'))
 server.use(express.json())
 
 server.get('/', (req, res) => {
-  res.send(`<h2>Let's write some middleware!</h2>`);
+  res.send(process.env.MESSAGE);
 });
 
 server.use('/api/users', userRouter);
