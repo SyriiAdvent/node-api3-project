@@ -1,6 +1,7 @@
+require('dotenv').config()
 const express = require('express');
 const server = express();
-const PORT = 5000
+const PORT = process.env.PORT
 // Middleware imports
 const helmet = require('helmet');
 const morgan = require('morgan');
